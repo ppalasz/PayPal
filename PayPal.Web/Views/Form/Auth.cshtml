@@ -1,0 +1,78 @@
+﻿@using System.Security.Cryptography.X509Certificates
+@using PayPal.Web
+
+
+@Html.Partial("Menu")
+
+@{
+    PostAuth postAuth = Model;
+    X509Certificate2 certificate = ViewBag.certificate;
+}
+
+<form method="Post" >
+
+    @if (certificate != null)
+    {
+        <p>certificate: @certificate.FriendlyName</p>
+    }
+
+    <div>
+        <div style="margin-top: 20px;">
+            <table>
+
+                <tr>
+                    <td colspan="2">
+                        <div style="text-align: center; padding: 20px">
+                            <input type="submit" value="Submit">
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+
+    </div>
+
+
+    <table>
+        <tr>
+            <td><label for="postURL">url</label></td>
+            <td>
+                <input id="postURL" name="postURL" style="width:500px"
+                       Value="@postAuth.PostUrl"
+                       Required />
+            </td>
+        </tr>
+        <tr>
+            <td><label for="methodSelect">Method</label></td>
+            <td>
+                <select name="methodSelect" id="methodSelect">
+                    <option value="GET" @{ if (postAuth.MethodSelect == "GET") { @: selected="selected"
+                            } }>
+                        GET
+                    </option>
+                    <option value="POST" @{ if (postAuth.MethodSelect == "POST") { @: selected="selected"
+                            } }>
+                        POST
+                    </option>
+                    <option value="PUT" @{ if (postAuth.MethodSelect == "PUT") { @: selected="selected"
+                                            } }>
+                        PUT
+                    </option>
+                    <option value="DELETE" @{ if (postAuth.MethodSelect == "DELETE") { @: selected="selected"
+                            } }>
+                        DELETE
+                    </option>
+                </select>
+            </td>
+        </tr>
+    </table>
+
+</form>
+
+POST<br />
+    <textarea id="posted_textarea" readonly rows="10" cols="100">@postAuth.PostedValues</textarea>
+<br /><br />
+RESPONSE<br />
+        <div id="response_textarea" style="border: 1px solid black; width: 800px; height: 200px;overflow: scroll">@Html.Raw(postAuth.Response)</div>
+

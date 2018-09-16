@@ -1,0 +1,106 @@
+﻿@{
+    Layout = null;
+}
+
+<div style="margin-top: 20px;">
+    <table>
+        <tr>
+            <td><label for="ProjectId">Id Project</label></td>
+            <td><input id="ProjectId" name="ProjectId" 
+                       Value="1"
+                       Required pattern="^[0-9]*$" data-tip="Only integer" style="width:120px" /></td>
+        </tr>
+        @*<tr>
+            <td><label for="ProjectName">Project Name</label></td>
+            <td><input id="ProjectName" name="ProjectName" style="width:500px"
+                       Value="ble ble"
+                       Required /></td>
+        </tr>
+        <tr>
+            <td><label for="SourceLanguage">Source Language</label></td>
+            <td><input id="SourceLanguage" name="SourceLanguage"  style="width:200px"
+                       Value="em-pl"
+                       Required /></td>
+        </tr>
+        <tr>
+            <td><label for="TargetLanguage">Target Language</label></td>
+            <td><input id="TargetLanguage" name="TargetLanguage" style="width:200px"
+                       Value="vv-dd"
+                       Required /></td>
+        </tr>
+        <tr>
+            <td><label for="WordCountIce">Word Count Ice</label></td>
+            <td><input id="WordCountIce" name="WordCountIce" style="width:100px"
+                       Value="1"
+                       Required pattern="[+-]?([0-9]*[.])?[0-9]+" /></td>
+        </tr>
+        <tr>
+            <td><label for="WordCountExact">Word Count Exact</label></td>
+            <td><input id="WordCountExact" name="WordCountExact" style="width:100px"
+                       Value="2"
+                       Required pattern="[+-]?([0-9]*[.])?[0-9]+" /></td>
+        </tr>
+        <tr>
+            <td><label for="WordCount99_80">Word Count 99%-80%</label></td>
+            <td><input id="WordCount99_80" name="WordCount99_80" style="width:100px"
+                       Value="3"
+                       Required pattern="[+-]?([0-9]*[.])?[0-9]+" /></td>
+        </tr>
+        <tr>
+            <td><label for="WordCount79_70">Word Count 79%-70%</label></td>
+            <td><input id="WordCount79_70" name="WordCount79_70" style="width:100px"
+                       Value="4"
+                       Required pattern="[+-]?([0-9]*[.])?[0-9]+" /></td>
+        </tr>
+        <tr>
+            <td><label for="WordCount69">Word Count 69%-0%</label></td>
+            <td><input id="WordCount69" name="WordCount69" style="width:100px"
+                       Value="5"
+                       Required pattern="[+-]?([0-9]*[.])?[0-9]+" /></td>
+        </tr>
+        <tr>
+            <td><label for="Repetition">Repetition</label></td>
+            <td><input id="Repetition" name="Repetition" style="width:100px"
+                       Value="6"
+                       Required pattern="[+-]?([0-9]*[.])?[0-9]+" /></td>
+        </tr>
+        <tr>
+            <td><label for="CreationDate">Creation Date</label></td>
+            <td><input id="CreationDate" name="CreationDate" style="width:150px"
+                       Value="2018-09-22"
+                       Required /></td>
+        </tr>*@
+        <tr>
+            <td><label for="DueDate">Due Date</label></td>
+            <td><input id="DueDate" name="DueDate" style="width:150px"
+                       Value="2019-12-05"
+                       Required /></td>
+        </tr>
+        @*<tr>
+            <td><label for="Url">Url</label></td>
+            <td><input id="Url" name="Url"  style="width:250px"
+                       Value="http://url.com"
+                       Required /></td>
+        </tr>
+        <tr>
+            <td><label for="ProjectType">Project Type</label></td>
+            <td><input id="ProjectType" name="ProjectType" style="width:100px"
+                       Value="translation"
+                       Required /></td>
+        </tr>*@
+        <tr>
+            <td><label for="Status">Status</label></td>
+            <td><input id="Status" name="Status" style="width:100px"
+                       Value="canceled"
+                       Required /></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div style="text-align: center;padding:20px">
+                    <input type="submit" value="Submit">
+                </div>
+            </td>
+        </tr>
+    </table>
+
+</div>

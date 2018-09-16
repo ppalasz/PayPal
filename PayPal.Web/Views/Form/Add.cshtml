@@ -1,0 +1,96 @@
+﻿@{
+
+}
+
+@Html.Partial("Menu")
+
+
+
+<form method="Post" onsubmit="AddProject();return (false);">
+
+    <script language="javascript">
+
+
+        function AddProject() {
+
+
+
+            var json = {
+                "ProjectId": $("#ProjectId").val(),
+                "ProjectName": $("#ProjectName").val(),
+                "SourceLanguage": $("#SourceLanguage").val(),
+                "TargetLanguage": $("#TargetLanguage").val(),
+                "WordCount":
+                    {
+                        "Ice": $("#WordCountIce").val(),
+                        "Exact": $("#WordCountExact").val(),
+                        "Wordcount_99_80": $("#WordCount99_80").val(),
+                        "Wordcount_79_70": $("#WordCount79_70").val(),
+                        "Wordcount_69_0": $("#WordCount69").val(),
+                        "Repetition": $("#Repetition").val()
+                    },
+                "CreationDate": $("#CreationDate").val(),
+                "DueDate": $("#DueDate").val(),
+                "ProjectUrl": $("#Url").val(),
+                "ProjectTypeName": $("#ProjectType").val(),
+                "StatusName": $("#Status").val()
+
+            };
+
+            $("#posted_textarea").val(JSON.stringify(json, null, "\t"));
+
+            var url = $("#postURL").val();
+            var methodSelect = $("#methodSelect").val();
+            //alert(methodSelect);
+            $.ajax({
+                type: methodSelect,
+                data: JSON.stringify(json),
+                url: url,
+                contentType: "application/json",
+                dataType: "json",
+                crossDomain: true,
+                success: function(data) {
+
+                    data = JSON.stringify(data, null, "\t");
+
+                    $("#response_textarea").val(data);
+                },
+                error: function (data, status) {
+                    var response = JSON.stringify(data, null, "\t");
+                    $("#response_textarea").val(status + "\n\n\n" + response);
+                }
+            }
+        )};
+
+
+        
+
+    </script>
+    <div>
+        @Html.Partial("AddForm")
+
+    </div>
+</form>
+
+<table>
+    <tr>
+        <td><label for="postURL">post to</label></td>
+        <td>
+            <input id="postURL" name="postURL" style="width:500px"
+                   Value="https://localhost:445/api/Project"
+                   Required />
+        </td>
+    </tr>
+    <tr>
+        <td><label for="methodSelect">Method</label></td>
+        <td>
+            <input name="methodSelect" id="methodSelect" value="POST" readonly />
+
+        </td>
+    </tr>
+</table>
+POST<br />
+<textarea  id="posted_textarea" readonly rows="10" cols="100"></textarea>
+<br /><br />
+RESPONSE<br />
+<textarea id="response_textarea" readonly rows="10" cols="100"></textarea>

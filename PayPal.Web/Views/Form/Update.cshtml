@@ -1,0 +1,81 @@
+﻿@{
+
+}
+
+@Html.Partial("Menu")
+
+<form method="Post" onsubmit="UpdateProject();return (false);">
+
+    <script language="javascript">
+
+
+        function UpdateProject() {
+
+            
+
+            var json = {
+                "ProjectId": $("#ProjectId").val(),
+                "DueDate": $("#DueDate").val(),
+                "StatusName": $("#Status").val()
+                
+            };
+
+            $("#posted_textarea").val(JSON.stringify(json, null, "\t"));
+
+            var url = $("#postURL").val(); 
+            var methodSelect = $("#methodSelect").val();
+            //alert(methodSelect);
+            $.ajax({
+                type: methodSelect,
+                data: JSON.stringify(json),
+                contentType: "application/json", //"text/plain"
+                dataType: "json",
+                url: url,
+                crossDomain: true,
+                success: function(data) {
+
+                    response = JSON.stringify(data, null, "\t");
+
+                    $("#response_textarea").val(response);
+                },
+                error: function (data, status) {
+                    
+                    var response = JSON.stringify(data, null, "\t");
+
+                    $("#response_textarea").val(response);
+                    }
+                }
+        )};
+
+    </script>
+    
+    
+    
+    <div>
+
+        @Html.Partial("UpdateForm")
+
+    </div>
+</form>
+<table>
+    <tr>
+        <td><label for="postURL">put to</label></td>
+        <td>
+            <input id="postURL" name="postURL" style="width:500px"
+                   Value="https://localhost:445/api/Project"
+                   Required />
+        </td>
+    </tr>
+    <tr>
+        <td><label for="methodSelect">Method</label></td>
+        <td>
+            <input name="methodSelect" id="methodSelect" value="PUT" readonly />
+            
+        </td>
+    </tr>
+</table>
+POST<br />
+<textarea  id="posted_textarea" readonly rows="10" cols="100"></textarea>
+<br/><br/>
+RESPONSE<br />
+<textarea id="response_textarea" readonly rows="10" cols="100"></textarea>

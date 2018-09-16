@@ -1,0 +1,12 @@
+C:\_ppalasz\Test\PayPal\PayPal.Business\bin\Release\netcoreapp2.0\PayPal.Business.deps.json
+C:\_ppalasz\Test\PayPal\PayPal.Business\bin\Release\netcoreapp2.0\PayPal.Business.dll
+C:\_ppalasz\Test\PayPal\PayPal.Business\bin\Release\netcoreapp2.0\PayPal.Business.pdb
+C:\_ppalasz\Test\PayPal\PayPal.Business\bin\Release\netcoreapp2.0\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\_ppalasz\Test\PayPal\PayPal.Business\bin\Release\netcoreapp2.0\Microsoft.AspNetCore.Http.Abstractions.xml
+C:\_ppalasz\Test\PayPal\PayPal.Business\obj\Release\netcoreapp2.0\PayPal.Business.csprojAssemblyReference.cache
+C:\_ppalasz\Test\PayPal\PayPal.Business\obj\Release\netcoreapp2.0\PayPal.Business.csproj.CoreCompileInputs.cache
+C:\_ppalasz\Test\PayPal\PayPal.Business\obj\Release\netcoreapp2.0\PayPal.Business.AssemblyInfoInputs.cache
+C:\_ppalasz\Test\PayPal\PayPal.Business\obj\Release\netcoreapp2.0\PayPal.Business.AssemblyInfo.cs
+C:\_ppalasz\Test\PayPal\PayPal.Business\obj\Release\netcoreapp2.0\PayPal.Business.csproj.CopyComplete
+C:\_ppalasz\Test\PayPal\PayPal.Business\obj\Release\netcoreapp2.0\PayPal.Business.dll
+C:\_ppalasz\Test\PayPal\PayPal.Business\obj\Release\netcoreapp2.0\PayPal.Business.pdb

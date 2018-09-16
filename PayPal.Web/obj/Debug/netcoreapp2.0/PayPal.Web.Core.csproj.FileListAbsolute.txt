@@ -1,0 +1,14 @@
+C:\_ppalasz\Test\PayPal\PayPal.Web.Core\bin\Debug\netcoreapp2.0\PayPal.Web.Core.deps.json
+C:\_ppalasz\Test\PayPal\PayPal.Web.Core\bin\Debug\netcoreapp2.0\PayPal.Web.Core.runtimeconfig.json
+C:\_ppalasz\Test\PayPal\PayPal.Web.Core\bin\Debug\netcoreapp2.0\PayPal.Web.Core.runtimeconfig.dev.json
+C:\_ppalasz\Test\PayPal\PayPal.Web.Core\bin\Debug\netcoreapp2.0\PayPal.Web.Core.dll
+C:\_ppalasz\Test\PayPal\PayPal.Web.Core\bin\Debug\netcoreapp2.0\PayPal.Web.Core.pdb
+C:\_ppalasz\Test\PayPal\PayPal.Web.Core\bin\Debug\netcoreapp2.0\PayPal.Models.Core.dll
+C:\_ppalasz\Test\PayPal\PayPal.Web.Core\bin\Debug\netcoreapp2.0\PayPal.Models.Core.pdb
+C:\_ppalasz\Test\PayPal\PayPal.Web.Core\obj\Debug\netcoreapp2.0\PayPal.Web.Core.csprojResolveAssemblyReference.cache
+C:\_ppalasz\Test\PayPal\PayPal.Web.Core\obj\Debug\netcoreapp2.0\PayPal.Web.Core.csproj.CoreCompileInputs.cache
+C:\_ppalasz\Test\PayPal\PayPal.Web.Core\obj\Debug\netcoreapp2.0\PayPal.Web.Core.AssemblyInfoInputs.cache
+C:\_ppalasz\Test\PayPal\PayPal.Web.Core\obj\Debug\netcoreapp2.0\PayPal.Web.Core.AssemblyInfo.cs
+C:\_ppalasz\Test\PayPal\PayPal.Web.Core\obj\Debug\netcoreapp2.0\PayPal.Web.Core.csproj.CopyComplete
+C:\_ppalasz\Test\PayPal\PayPal.Web.Core\obj\Debug\netcoreapp2.0\PayPal.Web.Core.dll
+C:\_ppalasz\Test\PayPal\PayPal.Web.Core\obj\Debug\netcoreapp2.0\PayPal.Web.Core.pdb

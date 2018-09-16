@@ -1,0 +1,94 @@
+﻿@{
+
+}
+
+@Html.Partial("Menu")
+
+
+<form method="Post" onsubmit="FindProject();return (false);">
+
+    <script language="javascript">
+        function FindProject() {
+
+            var projectId = $("#ProjectId").val();
+
+            var url = $("#postURL").val() + "?id=" + projectId; 
+            $("#posted_textarea").val(url);
+
+            
+            var methodSelect = $("#methodSelect").val();
+            //alert(methodSelect);
+            $.ajax({
+                type: methodSelect,
+                url: url,
+                contentType: "application/json",
+                dataType: "json",
+                crossDomain: true,
+                success: function (data) {
+
+                    data = JSON.stringify(data, null, "\t");
+
+                    $("#response_textarea").val(data);
+                },
+                error: function (data) {
+                    var response = JSON.stringify(data, null, "\t");
+                    $("#response_textarea").val(response);
+                }
+                }
+            )};
+            
+        
+
+
+    </script>
+
+    <div>
+        <div style="margin-top: 20px;">
+            <table>
+                <tr>
+                    <td><label for="ProjectId">Id Project</label></td>
+                    <td>
+                        <input id="ProjectId" name="ProjectId" Required pattern="^[0-9]*$"
+                               value="1"
+                               placeholder="Integer only" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div style="text-align: center; padding: 20px">
+                            <input type="submit" value="Submit">
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+
+    </div>
+</form>
+
+<table>
+    <tr>
+        <td><label for="postURL">post to</label></td>
+        <td>
+            <input id="postURL" name="postURL" style="width:500px"
+                   Value="https://localhost:445/api/Project"
+                   Required />
+        </td>
+    </tr>
+    <tr>
+        <td><label for="methodSelect">Method</label></td>
+        <td>
+            <select name="methodSelect" id="methodSelect">
+                <option value="GET">GET</option>
+               
+
+            </select>
+        </td>
+    </tr>
+</table>
+POST<br />
+<textarea  id="posted_textarea" readonly rows="10" cols="100"></textarea>
+<br /><br />
+RESPONSE<br />
+<textarea id="response_textarea" readonly rows="10" cols="100"></textarea>
